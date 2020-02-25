@@ -17,7 +17,7 @@ class Search extends Component {
     const val = e.target.value;
 
     if (val === "") {
-      this.setState({ images: [] });
+      this.setState({ images: [], searchText: "" });
     } else {
       this.setState({ [e.target.name]: val }, () => {
         axios
@@ -36,7 +36,6 @@ class Search extends Component {
   };
 
   render() {
-    console.log(this.state.images);
     return (
       <div>
         <TextField
